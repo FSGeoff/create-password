@@ -11,3 +11,6 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+function generatePassword() {
+	prompt("How many characters do you want in your password?");
+}
