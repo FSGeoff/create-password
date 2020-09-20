@@ -65,13 +65,22 @@ function generatePassword() {
 		";",
 		":",
 	];
-	var pwdLength = prompt(
-		"Choose the length of your password(8-128 characters)?"
-	);
+	var arr = [];
+	var section = 0;
+	pwdLength = 0;
+	while (pwdLength < 8 || pwdLength > 128) {
+		var pwdLength = prompt(
+			"Choose the length of your password(8-128 characters)?"
+		);
+	}
+
 	var selectLCase = confirm(
 		"Would you like lower case characters in your password?"
 	);
 	if (selectLCase) {
+		for (let i = 0; i <= Math.floor(section); i++) {
+			arr.push(letters[Math.random() * Number(letters.length - 1)]);
+		}
 	}
 	var selectUCase = confirm(
 		"Would you like upper case characters in your password?"
@@ -89,8 +98,10 @@ function generatePassword() {
 
 	// Checked to see that values were being passed
 	console.log(pwdLength);
+	console.log(section);
 	console.log(selectLCase);
 	console.log(selectUCase);
 	console.log(selectNum);
 	console.log(selectChars);
+	console.log(arr);
 }
