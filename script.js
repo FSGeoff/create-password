@@ -62,9 +62,17 @@ function generatePassword() {
 	);
 
 	// Selects randomly from the array of selected options
-	for (let i = 0; i < pwdLength; i++) {
-		pwdArr += characterArr[Math.floor(Math.random() * characterArr.length)];
-	}
+	do {
+		for (let i = 0; i < pwdLength; i++) {
+			pwdArr +=
+				characterArr[Math.floor(Math.random() * characterArr.length)];
+		}
+	} while (
+		pwdArr.includes(letters) == false &&
+		pwdArr.includes(numbers) == false &&
+		pwdArr.includes(letters.toUpperCase()) == false &&
+		pwdArr.includes(specialChar == false)
+	);
 
 	// Checked to see that values were being passed
 	console.log(pwdLength);
