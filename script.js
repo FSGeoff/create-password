@@ -25,6 +25,7 @@ function generatePassword() {
 		);
 	} while (pwdLength < 8 || pwdLength > 128);
 
+	// Asks if lower case characters should be included
 	var selectLCase = confirm(
 		"Would you like lower case characters in your password?"
 	);
@@ -32,24 +33,28 @@ function generatePassword() {
 	if (selectLCase) {
 		characterArr += letters;
 	}
-
+	// Asks if upper case characters should be included
 	var selectUCase = confirm(
 		"Would you like upper case characters in your password?"
 	);
 	if (selectUCase) {
 		characterArr += letters.toUpperCase();
 	}
+
+	// Asks if numbers should be included
 	var selectNum = confirm("Would you like numbers in your password?");
 	if (selectNum) {
 		characterArr += numbers;
 	}
-
+	//  Asks if special characters should be included
 	var selectChars = confirm(
 		"Would you like special characters in your password?"
 	);
 	if (selectChars) {
 		characterArr += specialChar;
 	}
+
+	// Selects randomly from the array of selected options
 	for (let i = 0; i < pwdLength; i++) {
 		pwdArr += characterArr[Math.floor(Math.random() * characterArr.length)];
 	}
