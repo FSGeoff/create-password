@@ -12,7 +12,6 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
-	
 	var pwdArr = "";
 	var characterArr = "";
 	var letters = "abcdefghijklmnopqrstuvwxyz";
@@ -25,8 +24,6 @@ function generatePassword() {
 			"Choose the length of your password(8-128 characters)?"
 		);
 	} while (pwdLength < 8 || pwdLength > 128);
-
-	
 
 	var selectLCase = confirm(
 		"Would you like lower case characters in your password?"
@@ -59,7 +56,6 @@ function generatePassword() {
 
 	// Checked to see that values were being passed
 	console.log(pwdLength);
-	console.log(section);
 	console.log(selectLCase);
 	console.log(selectUCase);
 	console.log(selectNum);
