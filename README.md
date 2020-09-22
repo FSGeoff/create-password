@@ -19,3 +19,5 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page -->
 
 THE PROJECT INVOLVED ASKING A USER FOR OPTIONS TO INCLUDE IN THE CREATION OF A CUSTOM PASSWORD. THE SYSTEM THEN TAKES THESE OPTIONS AND RANDOMLY SELECTS FROM THEM
+
+![](images/screenshot1.png)
