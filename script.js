@@ -68,10 +68,10 @@ function generatePassword() {
 				characterArr[Math.floor(Math.random() * characterArr.length)];
 		}
 	} while (
-		pwdArr.includes(letters) == false &&
-		pwdArr.includes(numbers) == false &&
-		pwdArr.includes(letters.toUpperCase()) == false &&
-		pwdArr.includes(specialChar == false)
+		pwdArr.includes(letters) !== true &&
+		pwdArr.includes(numbers) !== true &&
+		pwdArr.includes(letters.toUpperCase()) !== true &&
+		pwdArr.includes(specialChar !== true)
 	);
 
 	// Checked to see that values were being passed
